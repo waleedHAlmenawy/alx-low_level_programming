@@ -14,7 +14,7 @@ int main(void)
 
 	for (i = 0; i <= 25; i++)
 	{
-		if(alphabet[i] == 'q' || alphabet[i] == 'e')
+		if (alphabet[i] == 'q' || alphabet[i] == 'e')
 		{
 			continue;
 		}
