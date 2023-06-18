@@ -9,11 +9,11 @@ int main(void)
 
 	for (i = 0; i < 10; i++)
 	{
-		for (k = 0; k < 10; k++)
+		for (k = i; k < 10; k++)
 		{
 			for (c = 0; c < 10; c++)
 			{
-				for (j = 0; j < 10; j++)
+				for (j = c; j < 10; j++)
 				{
 					if (j == 0 && c == 0 && i == 0 && k == 0)
 						continue;
