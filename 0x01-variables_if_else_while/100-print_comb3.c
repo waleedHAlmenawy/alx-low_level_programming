@@ -18,12 +18,14 @@ int main(void)
 			}
 			putchar(i + 48);
 			putchar(k + 48);
-			if(k != 9)
+			if (i + 48 == 56 && k + 48 == 57)
 			{
-				putchar(44);
-				putchar(32);
-
+				continue;
 			}
+			putchar(44);
+			putchar(32);
+
+			
 		}
 	}
 	putchar(10);
