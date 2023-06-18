@@ -13,8 +13,10 @@ int main(void)
 		{
 			for (c = 0; c < 10; c++)
 			{
-				for (j = 1; j < 10; j++)
+				for (j = 0; j < 10; j++)
 				{
+					if (j == 0 && c == 0 && i == 0 && k == 0)
+						continue;
 					putchar(i + 48);
 					putchar(k + 48);
 					putchar(32);
