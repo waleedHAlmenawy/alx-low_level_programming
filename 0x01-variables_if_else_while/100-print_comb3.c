@@ -18,8 +18,12 @@ int main(void)
 			}
 			putchar(i + 48);
 			putchar(k + 48);
-			putchar(44);
-			putchar(32);
+			if(k != 9)
+			{
+				putchar(44);
+				putchar(32);
+
+			}
 		}
 	}
 	putchar(10);
