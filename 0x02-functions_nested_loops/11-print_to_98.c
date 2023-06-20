@@ -1,4 +1,5 @@
 #include "main.h"
+#include "_putchar.h"
 /**
  * print_to_98 - function definition
  * @n: intger
@@ -19,7 +20,6 @@ void print_to_98(int n)
 			_putchar(' ');
 			n++;
 		}
-
 		if (n == 0)
 		{
 			_putchar(48);
@@ -27,7 +27,6 @@ void print_to_98(int n)
 			_putchar(' ');
 			n++;
 		}
-
 		if (n > 0)
 		{
 			if ((n / 100) != 0)
@@ -39,10 +38,16 @@ void print_to_98(int n)
 			_putchar(' ');
 			if (n < 98)
 				n++;
-			n--;
+			else
+				n--;
 		}
 	}
 	_putchar('9');
 	_putchar('8');
 	_putchar('\n');
+}
+
+int main()
+{
+	print_to_98(81);
 }
