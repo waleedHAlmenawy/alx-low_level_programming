@@ -5,9 +5,14 @@
 void print_alphabet_x10(void)
 {
 	int i;
+	char *alphabet = "abcdefghijklmnopqrstuvwxyz";
 
 	for (i = 0; i < 10; i++)
 	{
-		print_alphabet();
+		for(; *alphabet; alphabet++)
+		{
+			_putchar(*ahphabet);
+		}
+		_putchar('\n');
 	}
 }
