@@ -14,20 +14,20 @@ void times_table(void)
 
 			if ((r / 10) != 0)
 			{
-				putchar(48 + (r / 10));
+				_putchar(48 + (r / 10));
 			} else if (k != 0)
 			{
-				putchar(' ');
+				_putchar(' ');
 			}
-			putchar(48 + (r % 10));
+			_putchar(48 + (r % 10));
 
 			if (k != 9)
 			{
-				putchar(',');
-				putchar(' ');
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 
 }
