@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include <main.h>
+#include "main.h"
 
 /**
  * main - Entry point
@@ -19,6 +19,8 @@ int main(void)
 	}
 
 	putchar('\n');
+
+	_putchar('f');
 
 	return (0);
 }
