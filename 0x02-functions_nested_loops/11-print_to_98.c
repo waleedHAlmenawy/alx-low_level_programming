@@ -1,5 +1,4 @@
 #include "main.h"
-#include "_putchar.h"
 /**
  * print_to_98 - function definition
  * @n: intger
@@ -45,9 +44,4 @@ void print_to_98(int n)
 	_putchar('9');
 	_putchar('8');
 	_putchar('\n');
-}
-
-int main()
-{
-	print_to_98(81);
 }
