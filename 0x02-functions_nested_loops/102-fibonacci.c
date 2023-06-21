@@ -17,10 +17,10 @@ int main(void)
 		num3 = num1 + num2;
 		if (i == 50)
 		{
-			printf("%d\n", num3);
+			printf("%ld\n", num3);
 		} else
 		{
-			printf("%d, ", num3);
+			printf("%ld, ", num3);
 		}
 
 		num1 = num2;
