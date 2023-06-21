@@ -14,8 +14,13 @@ int main(void)
 	for (i = 0; i < 51; i++)
 	{
 		num3 = num1 + num2;
-
-		printf("%lld, ", num3);
+		if (i == 50)
+		{
+			printf("%lld\n", num3);
+		} else
+		{
+			printf("%lld, ", num3);
+		}
 
 		num1 = num2;
 		num2 = num3;
