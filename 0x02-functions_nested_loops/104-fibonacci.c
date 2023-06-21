@@ -1,19 +1,22 @@
 #include <stdio.h>
 /**
- * main - entry point
- * Return: 0
  * print - function definition
+ * @n: long intger
  */
-void print(long n)
+/**
+ * main - Entry point
+ * Return: 0
+ */
+
+void print(unsigned long n)
 {
-    if (n < 0) {
-        n = -n;
-    }
- 
-    if (n/10)
-        print(n/10);
- 
-    putchar(n%10 + '0');
+	if (n < 0)
+		n = -n;
+
+	if (n / 10)
+		print(n / 10);
+
+	putchar(n % 10 + '0');
 }
 
 int main(void)
@@ -24,7 +27,6 @@ int main(void)
 	num1 = 0;
 	num2 = 1;
 	num3 = 0;
-	
 	for (i = 0; i < 98; i++)
 	{
 		num3 = num1 + num2;
