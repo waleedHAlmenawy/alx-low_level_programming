@@ -12,10 +12,10 @@ int main(void)
 	num2 = 1;
 	num3 = 0;
 
-	for (i = 0; i <= 51; i++)
+	for (i = 0; i < 50; i++)
 	{
 		num3 = num1 + num2;
-		if (i == 51)
+		if (i == 49)
 		{
 			printf("%ld\n", num3);
 		} else
