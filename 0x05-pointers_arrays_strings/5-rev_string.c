@@ -9,11 +9,11 @@ void rev_string(char *s)
 
 	for (i = 0; i != '\0'; i++)
 	{}
-	j = i - 1;
+	j = i;
 
 	for (k = 0; k < i; k++)
 	{
-		s[k] = *s[j];
+		*s[k] = *s[j];
 		j--;
 	}
 }
