@@ -6,9 +6,9 @@
  */
 int _atoi(char *s)
 {
-	int num = 0, sign = 1;
+	int num = 0, sign = 1, i;
 
-	for (int i = 0; s[i] != 0; i++)
+	for (i = 0; s[i] != 0; i++)
 	{
 
 		if (s[i] >= 48 && s[i] <= 57)
