@@ -20,5 +20,5 @@ int _atoi(char *s)
 		if ((s[i] < 48 || s[i] > 57) && num != 0)
 			break;
 	}
-	return (num);
+	return (num * sign);
 }
