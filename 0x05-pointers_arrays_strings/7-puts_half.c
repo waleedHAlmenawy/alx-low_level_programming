@@ -3,7 +3,7 @@
  * puts_half - function definition
  * @str: String
  */
-void puts_half(char *str);
+void puts_half(char *str)
 {
 	int len, i;
 
