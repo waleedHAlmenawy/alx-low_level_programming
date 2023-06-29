@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strncpy - copies string from src to dest
  * @dest: Pointer
@@ -8,13 +9,28 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
+	int i, k, c;
 
-	i = 0;
-
-	while (i < n)
+	i = 0, k = 0, c = 0;
+	while (src[k] != 0)
 	{
-		dest[i] = src[i];
+		k++;
+	}
+
+	while (dest[c] != 0)
+	{
+		c++;
+	}
+
+	while (i < c)
+	{
+		if (i <= n && i <= k)
+		{
+			dest[i] = src[i];
+		} else if (n > k)
+		{
+			dest[i] = 0;
+		}
 		i++;
 	}
 
