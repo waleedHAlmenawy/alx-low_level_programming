@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * _strncpy - copies string from src to dest
  * @dest: Pointer
