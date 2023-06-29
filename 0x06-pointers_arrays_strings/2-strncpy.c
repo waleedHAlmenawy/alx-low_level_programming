@@ -26,7 +26,7 @@ char *_strncpy(char *dest, char *src, int n)
 		if (i < n && i < k)
 		{
 			dest[i] = src[i];
-		} else if (n > k)
+		} else if (n > k && i < n)
 		{
 			dest[i] = 0;
 		}
