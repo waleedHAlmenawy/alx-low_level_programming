@@ -15,7 +15,7 @@ char *_strchr(char *s, char c)
 		i++;
 	}
 
-	while (*s != c && k < i)
+	while (*s != c && k <= i)
 	{
 		s++;
 		k++;
