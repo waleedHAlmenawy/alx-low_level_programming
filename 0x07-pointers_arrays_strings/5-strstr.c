@@ -20,7 +20,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 		if (check == k)
 		{
-			haystack += i + 1;
+			haystack += i;
 			break;
 		}
 		i++, k = 0, check = 0;
