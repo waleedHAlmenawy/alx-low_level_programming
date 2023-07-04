@@ -3,7 +3,7 @@
  * _strstr - function definition
  * @haystack: String
  * @needle: String
- * Return: 0 if null, @haystack if not null
+ * Return: @haystack
  */
 char *_strstr(char *haystack, char *needle)
 {
