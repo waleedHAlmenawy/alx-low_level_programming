@@ -28,7 +28,7 @@ char *_strpbrk(char *s, char *accept)
 	}
 
 	if (!check)
-		s += i;
+		s += i + 1;
 
 	return (s);
 }
