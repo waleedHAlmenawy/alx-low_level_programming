@@ -12,7 +12,7 @@ char *_strstr(char *haystack, char *needle)
 	i = 0, k = 0, check = 0;
 	while (haystack[i] != 0)
 	{
-		while (needle[k] != 0 && haystack[k] != 0)
+		while (needle[k] != 0)
 		{
 			if (haystack[i + k] == needle[k])
 				check++;
@@ -20,13 +20,10 @@ char *_strstr(char *haystack, char *needle)
 		}
 		if (check == k)
 		{
-			haystack += i;
-			break;
+			return (haystack + i);
 		}
 		i++, k = 0, check = 0;
 	}
 
-	if (check)
-		return (haystack);
 	return (0);
 }
