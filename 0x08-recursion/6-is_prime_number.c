@@ -25,7 +25,7 @@ int helper(int n, int fac)
 		return (0);
 	}
 
-	return (helper(n, fact - 1));
+	return (helper(n, fac - 1));
 }
 
 /**
