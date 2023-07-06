@@ -7,11 +7,14 @@
  */
 int helper(int x, int y)
 {
-	if (y < 0)
-		return (-1);
-	if (x == y * y)
+	if (x == (y * y))
+	{
 		return (y);
-	return (helper(x, y - 1));
+	} else if (x > (y * y))
+	{
+		return (helper(x, y + 1));
+	}
+	return (-1);
 }
 /**
  * _sqrt_recursion - function definition
@@ -20,5 +23,5 @@ int helper(int x, int y)
  */
 int _sqrt_recursion(int n)
 {
-	return (helper(n, n));
+	return (helper(n, 1));
 }
