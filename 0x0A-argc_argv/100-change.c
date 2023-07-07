@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int amt_of_m = atoi(argv[1]), change = 0, k = 0;
+	int amt_of_m = atoi(argv[1]), change = 0;
 
 	if (argc > 2)
 	{
@@ -18,16 +18,6 @@ int main(int argc, char *argv[])
 	if (amt_of_m < 0)
 	{
 		printf("0\n");
-	}
-	while (argv[1][k] != 0)
-	{
-		if (argv[1][k] >= 48 && argv[1][k] <= 57)
-		{
-			k++;
-		} else
-		{
-			printf("Error\n");
-		}
 	}
 	if (amt_of_m >= 25)
 	{
