@@ -8,13 +8,16 @@
  */
 int main(int argc, char *argv[])
 {
-	int amt_of_m = atoi(argv[1]), change = 0;
+	int amt_of_m, change = 0;
 
-	if (argc > 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
+	amt_of_m = atoi(argv[1]);
+
 	if (amt_of_m <= 0)
 	{
 		printf("0\n");
