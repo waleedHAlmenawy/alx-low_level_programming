@@ -25,17 +25,17 @@ int main(int argc, char *argv[])
 		change = amt_of_m / 25;
 		amt_of_m -= 25 * (amt_of_m / 25);
 	}
-	if (amt_of_m >= 10 && amt_of_m < 25)
+	if (amt_of_m >= 10)
 	{
 		change += amt_of_m / 10;
 		amt_of_m -= 10 * (amt_of_m / 10);
 	}
-	if (amt_of_m >= 5 && amt_of_m < 10)
+	if (amt_of_m >= 5)
 	{
 		change += amt_of_m / 5;
 		amt_of_m -= 5 * (amt_of_m / 5);
 	}
-	if (amt_of_m >= 2 && amt_of_m < 5)
+	if (amt_of_m >= 2)
 	{
 		change += amt_of_m / 2;
 		amt_of_m -= 2 * (amt_of_m / 2);
