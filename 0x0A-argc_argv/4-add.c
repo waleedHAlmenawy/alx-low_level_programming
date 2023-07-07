@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i = 1, count = 0;
+	int i = 1, k = 0, count = 0;
 
 	if (argc < 1)
 	{
@@ -18,13 +18,19 @@ int main(int argc, char *argv[])
 
 	while (i < argc)
 	{
-		if (atoi(argv[i]) == 0 && argv[i][0] != '0')
+		while (argv[i][k] != 0)
 		{
-			printf("Error\n");
-			return (1);
+			if (argv[i][k] >= 48 && argv[i][k] <= 57)
+			{
+				k++;
+			} else
+			{
+				printf("Error\n");
+				return (0);
+			}
 		}
 		count += atoi(argv[i]);
-		i++;
+		i++, k = 0;
 	}
 
 	printf("%d\n", count);
