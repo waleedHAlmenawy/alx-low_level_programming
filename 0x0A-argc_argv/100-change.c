@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	if (amt_of_m < 0)
+	if (amt_of_m <= 0)
 	{
 		printf("0\n");
 		return (0);
