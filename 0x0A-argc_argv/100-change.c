@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * main - entry point
  * @argc: Number of arguments passed in the command line
