@@ -4,16 +4,16 @@
  * @i: intger
  * Return: 0
  */
-int _abs(int i)
+int _abs(int n)
 {
 	int result;
 
-	if (i >= 0)
+	if (n >= 0)
 	{
-		result = i * 1;
+		result = n * 1;
 	} else
 	{
-		result = i * -1;
+		result = n * -1;
 	}
 
 	return (result);
