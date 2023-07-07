@@ -13,19 +13,20 @@ int main(int argc, char *argv[])
 	if (argc < 1)
 	{
 		printf("0\n");
-	} else if (argc > 1)
-	{
-		while (i < argc)
-		{
-			if (atoi(argv[i]) == 0)
-			{
-				printf("Error\n");
-				return (1);
-			}
-			count += atoi(argv[i]);
-			i++;
-		}
+		return (0);
 	}
+
+	while (i < argc)
+	{
+		if (atoi(argv[i]) == 0)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		count += atoi(argv[i]);
+		i++;
+	}
+
 	printf("%d\n", count);
 	return (0);
 }
