@@ -15,9 +15,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-
 	amt_of_m = atoi(argv[1]);
-
 	if (amt_of_m <= 0)
 	{
 		printf("0\n");
