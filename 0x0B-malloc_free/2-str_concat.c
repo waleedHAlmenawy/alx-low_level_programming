@@ -30,9 +30,14 @@ char *str_concat(char *s1, char *s2)
 	len = _strlen(s1) + _strlen(s2);
 	heap = (char *) malloc(sizeof(char) * (len + 1));
 
-	if (heap == NULL || (s1 == NULL && s2 == NULL))
-		return (NULL);
+	if (heap == NULL)
+		return NULL;
 
+	if (s1 == NULL && s2 == NULL)
+	{
+		*heap = 0;
+		return (heap);
+	}
 	if (s1 != NULL)
 	{
 		while (s1[i] != 0)
