@@ -25,24 +25,30 @@ int _strlen(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	int len, i = 0, k = 0;
-char *heap;
+	char *heap;
 
 	len = _strlen(s1) + _strlen(s2);
-	heap = (char *) malloc(sizeof(char) * (len));
+	heap = (char *) malloc(sizeof(char) * (len - 1));
 
 	if (heap == NULL)
 		return (NULL);
-
-	while (s1[i] != 0)
+	if (s1 == NULL && s2 == NULL)
+		return (heap = "");
+	if (s1 != NULL)
 	{
-		heap[i] = s1[i];
-		i++;
+		while (s1[i] != 0)
+		{
+			heap[i] = s1[i];
+			i++;
+		}
 	}
-
-	while (s2[k] != 0)
+	if (s2 != NULL)
 	{
-		heap[i] = s2[k];
-		i++, k++;
+		while (s2[k] != 0)
+		{
+			heap[i] = s2[k];
+			i++, k++;
+		}
 	}
 	return (heap);
 }
