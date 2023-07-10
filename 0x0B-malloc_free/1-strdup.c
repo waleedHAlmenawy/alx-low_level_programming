@@ -25,12 +25,14 @@ char *_strdup(char *str)
 	int len, i = 0;
 	char *heap;
 
-	if (str == NULL || heap == NULL)
+	if (str == NULL)
 		return (NULL);
 
 	len = _strlen(str);
 	heap = (char *)malloc(sizeof(char) * (len + 1));
 
+	if (heap == NULL)
+		return (NULL);
 	while (i <= len)
 	{
 		heap[i] = str[i];
