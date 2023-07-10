@@ -23,12 +23,14 @@ int _strlen(char *str)
 char *_strdup(char *str)
 {
 	int len, i = 0;
-	char *heap = (char *)malloc(sizeof(char) * (len + 1));
+	char *heap;
 
 	if (str == NULL || heap == NULL)
 		return (NULL);
 
 	len = _strlen(str);
+	heap = (char *)malloc(sizeof(char) * (len + 1));
+
 	while (i <= len)
 	{
 		heap[i] = str[i];
