@@ -9,7 +9,7 @@ int _strlen(char *s)
 	int i = 0;
 
 	if (s == NULL)
-		return (1);
+		return (0);
 	while (s[i] != 0)
 	{
 		i++;
@@ -28,12 +28,11 @@ char *str_concat(char *s1, char *s2)
 	char *heap;
 
 	len = _strlen(s1) + _strlen(s2);
-	heap = (char *) malloc(sizeof(char) * (len - 1));
+	heap = (char *) malloc(sizeof(char) * (len + 1));
 
-	if (heap == NULL)
+	if (heap == NULL || (s1 == NULL && s2 == NULL))
 		return (NULL);
-	if (s1 == NULL && s2 == NULL)
-		return (heap = "");
+
 	if (s1 != NULL)
 	{
 		while (s1[i] != 0)
