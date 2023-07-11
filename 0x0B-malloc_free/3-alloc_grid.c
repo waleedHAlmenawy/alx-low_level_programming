@@ -3,7 +3,6 @@
  * alloc_grid - creates 2D array
  * @width: Width
  * @height: Height
- * 
  * Return: 2D array
  */
 int **alloc_grid(int width, int height)
