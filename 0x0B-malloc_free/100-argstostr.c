@@ -32,7 +32,7 @@ char *argstostr(int ac, char **av)
 		slen += _strlen(av[k]);
 		k++;
 	}
-	coStr = (char *)malloc(sizeof(char) * (slen + ac));
+	coStr = (char *)malloc(sizeof(char) * (slen + ac - 1));
 	if (coStr == NULL)
 		return (NULL);
 	k = 0;
