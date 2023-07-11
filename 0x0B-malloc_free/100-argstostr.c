@@ -1,6 +1,6 @@
 #include <stdlib.h>
 /**
- * strlen - counts the length of a string
+ * _strlen - counts the length of a string
  * @s: A string
  * Return: length
  */
