@@ -50,6 +50,6 @@ int main(void)
 	}
 	print_grid(grid, h, w);
 	printf("\n");
-	free(grid);
 	return (0);
 }
+
