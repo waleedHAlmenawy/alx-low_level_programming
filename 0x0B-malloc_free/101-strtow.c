@@ -68,6 +68,6 @@ char **strtow(char *str)
 			j++;
 		}
 	}
-	words[j] = NULL;
+	words[j] = (char *)malloc(sizeof(char));
 	return (words);
 }
