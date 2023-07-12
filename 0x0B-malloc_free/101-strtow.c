@@ -33,13 +33,12 @@ char **strtow(char *str)
 	int wordsNum, revWord, wordlen, i, j;
 	char **words;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || *str == 32)
 		return (NULL);
 	wordsNum = countWords(str);
 	words = (char **)malloc(sizeof(char *) * wordsNum);
 	if (words == NULL)
 		return (NULL);
-
 	for (i = 0, wordlen = 0, j = 0; str[i] != 0; i++, wordlen = 0)
 	{
 		while (str[i] != 32)
