@@ -54,7 +54,7 @@ char **strtow(char *str)
 
 		if (wordlen != 0)
 		{
-			words[j] = (char *)malloc(sizeof(char) * wordlen + 1);
+			words[j] = (char *)malloc(sizeof(char) * wordlen);
 			i -= wordlen;
 			revWord = 0;
 			while (revWord < wordlen)
