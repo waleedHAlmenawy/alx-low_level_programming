@@ -33,9 +33,9 @@ char **strtow(char *str)
 	int wordsNum, revWord, wordlen, i, j;
 	char **words;
 
-	if (str == NULL || *str == 0)
+	if (str == NULL || *str == 0 || countWords == 0)
 		return (NULL);
-	countWords(str) ? wordsNum = countWords(str) : return NULL;
+	wordsNum = countWords(str);
 	words = (char **)malloc(sizeof(char *) * wordsNum);
 	if (words == NULL)
 		return (NULL);
