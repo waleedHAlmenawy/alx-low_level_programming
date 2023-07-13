@@ -40,11 +40,12 @@ int main(void)
 {
     char *a;
 
-    a = _calloc(98, sizeof(char));
-    strcpy(a, "Best");
+    a = _calloc(1, sizeof(char));
+    /*strcpy(a, "Best");
     strcpy(a + 4, " School! :)\n");
     a[97] = 'f';
     simple_print_buffer(a, 98);
-    free(a);
+    free(a);*/
+    printf("%d\n", a[1]);
     return (0);
 }
