@@ -24,7 +24,7 @@ int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i = 0, k = 0, lens1, lens2;
-	char *s;
+	char *s = NULL;
 
 	if (s1 == NULL)
 		s1 = "";
