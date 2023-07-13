@@ -17,22 +17,17 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	while (i < nmemb)
 	{
 		p = malloc(size);
-		if (p == NULL)
-		{
-			while (i > 0)
-			{
-				free(p);
-				p--, i--;
-			}
-			free(p);
-			return (NULL);
-		}
 		p++, i++;
 	}
 	p -= (nmemb - 1);
 	i = 0;
 	while (i < nmemb)
 	{
+		if (p[i] == NULL)
+		{
+			free(p);
+			return (NULL);
+		}
 		p[i] = 0;
 		i++;
 	}
