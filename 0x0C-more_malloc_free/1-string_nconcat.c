@@ -44,12 +44,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= lens2)
 		n = lens2;
 
-	while (i < lens1)
+	while (i < lens1 && *s1 != 0)
 	{
 		s[i] = s1[i];
 		i++;
 	}
-	while (k < n)
+	while (k < n && *s2 != 0)
 	{
 		s[i] = s2[k];
 		k++, i++;
