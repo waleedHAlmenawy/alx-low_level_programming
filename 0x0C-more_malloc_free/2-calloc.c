@@ -7,7 +7,7 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int i = 0, k = 0;
+	unsigned int i = 0;
 	int *p;
 
 	if (nmemb == 0 || size == 0)
@@ -19,11 +19,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		p = malloc(size);
 		if (p == NULL)
 		{
-			k = i;
-			while (k != 0)
+			while (i != 0)
 			{
 				free(p);
-				k--;
+				i--, p--;
 			}
 			free(p);
 			return (NULL);
