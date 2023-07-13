@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s1 == NULL && s2 == NULL)
 		s1 = "", s2 = "";
 
-	lends1 = _strlen(s1);
+	lens1 = _strlen(s1);
 	lens2 = _strlen(s2);
 
 	s = malloc((lens1 + lens2 + 1) * sizeof(char));
