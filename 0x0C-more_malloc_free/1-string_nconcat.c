@@ -31,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL && s1 != NULL)
 		s2 = "";
 	if (s1 == NULL && s2 == NULL)
-		s1 = "", s2 = "";
+		return (NULL);
 
 	lens1 = _strlen(s1);
 	lens2 = _strlen(s2);
