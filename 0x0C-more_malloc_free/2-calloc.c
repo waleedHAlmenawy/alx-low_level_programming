@@ -21,8 +21,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		{
 			while (i != 0)
 			{
-				free(p);
-				i--, p--;
+				free(p[i]);
+				i--;
 			}
 			free(p);
 			return (NULL);
