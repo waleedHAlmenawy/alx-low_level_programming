@@ -26,8 +26,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int lens1, lens2, i = 0, k = 0;
 	char *s;
 
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
 	if (s1 == NULL && s2 != NULL)
 		s1 = "";
 	if (s2 == NULL && s1 != NULL)
@@ -36,7 +34,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	lens1 = _strlen(s1);
 	lens2 = _strlen(s2);
 
-	s = malloc((lens1 + lens2 + 1) * sizeof(char));
+	s = malloc((lens1 + lens2 + 2) * sizeof(char));
 
 	if (s == NULL)
 		return (NULL);
