@@ -1,8 +1,8 @@
 #include "dog.h"
+#include <stdlib.h>
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t new_dog;
-	dog_t *my_dog = &new_dog;
+	dog_t *my_dog = malloc(sizeof(dog_t));
 
 	my_dog->name = name;
 	my_dog->age = age;
