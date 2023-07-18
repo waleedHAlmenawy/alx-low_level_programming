@@ -29,7 +29,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int i = 0;
 	dog_t *my_dog = malloc(sizeof(dog_t));
 
-	if (my_dog == NULL)
+	if (my_dog == NULL || c_name == NULL || c_owner == NULL)
 		return (NULL);
 
 	while (name[i] != 0)
