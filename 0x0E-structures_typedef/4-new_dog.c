@@ -1,21 +1,5 @@
 #include "dog.h"
 #include <stdlib.h>
-#include <stdio.h>
-/**
- * _strlen - string length
- * @s: String
- * Return: String length
- */
-int _strlen(char *s)
-{
-	int i = 0;
-
-	while (s[i] != 0)
-	{
-		i++;
-	}
-	return (i);
-}
 /**
  * new_dog - creates a new dog
  * @name: dog name
