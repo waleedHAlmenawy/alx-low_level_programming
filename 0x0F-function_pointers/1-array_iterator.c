@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * array_iterator - executes a fun given as a parameter on each element of an array
+ * array_iterator - executes a fun given as a param on each element of an array
  * @array: An array
  * @size: Number of elements
  * @action: Fuction to be executed
