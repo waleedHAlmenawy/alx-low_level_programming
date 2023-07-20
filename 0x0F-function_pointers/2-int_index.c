@@ -10,16 +10,13 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i = 0;
 
-	if (size <= 0)
+	if (size <= 0 || cmp == NULL || array == NULL)
 		return (-1);
-	if (cmp != NULL)
+	while (i < size)
 	{
-		while (i < size)
-		{
-			if (cmp(array[i]) != 0)
-				break;
-			i++;
-		}
+		if (cmp(array[i]) != 0)
+			break;
+		i++;
 	}
 	if (i == size)
 		return (-1);
