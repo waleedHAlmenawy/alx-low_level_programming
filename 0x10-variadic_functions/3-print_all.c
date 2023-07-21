@@ -35,10 +35,9 @@ void print_all(const char * const format, ...)
 		}
 		if (format[i + 1] != 0)
 			printf(", ");
-		if (format[i + 1] == 0)
-			putchar(10);
 		i++;
 	}
+	putchar(10);
 	va_end(args);
 
 }
