@@ -7,18 +7,12 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	unsigned int i = 0, n;
+	unsigned int i = 0;
 	char *x;
 
 	va_start(args, format);
 
 	while (format[i] != 0)
-	{
-		i++;
-	}
-	n = i;
-	i = 0;
-	while (i < n)
 	{
 		switch (format[i])
 		{
@@ -39,7 +33,7 @@ void print_all(const char * const format, ...)
 				i++;
 				continue;
 		}
-		if (i != n - 1)
+		if (format[i + 1] != 0)
 			printf(", ");
 		i++;
 	}
