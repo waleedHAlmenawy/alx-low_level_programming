@@ -35,9 +35,10 @@ void print_all(const char * const format, ...)
 		}
 		if (format[i + 1] != 0)
 			printf(", ");
+		else
+			putchar(10);
 		i++;
 	}
-	putchar (10);
 	va_end(args);
 
 }
