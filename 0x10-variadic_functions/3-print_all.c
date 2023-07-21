@@ -11,6 +11,11 @@ void print_all(const char * const format, ...)
 	unsigned int i = 0;
 	char *x;
 
+	if (format == 0)
+	{
+		putchar(10);
+		exit(0);
+	}
 	va_start(args, format);
 
 	while (format[i] != 0)
