@@ -35,7 +35,7 @@ void print_all(const char * const format, ...)
 		}
 		if (format[i + 1] != 0)
 			printf(", ");
-		else
+		if (format[i + 1] == 0)
 			putchar(10);
 		i++;
 	}
