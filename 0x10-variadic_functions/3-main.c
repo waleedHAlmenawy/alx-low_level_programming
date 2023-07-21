@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    print_all("");
+    print_all("ceisk", 'B', 3, "stSchool", 456);
     return (0);
 }
