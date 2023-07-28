@@ -11,7 +11,7 @@ size_t print_list(const list_t *h)
 	unsigned int num_of_nodes = 0, check = 1;
 	list_t temp = *h;
 
-	while (check && temp != NULL)
+	while (check && h != NULL)
 	{
 		if (temp.str == NULL)
 			printf("[0] (nil)\n");
