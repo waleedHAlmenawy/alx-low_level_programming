@@ -9,9 +9,12 @@
 size_t print_list(const list_t *h)
 {
 	unsigned int num_of_nodes = 0, check = 1;
-	list_t temp = *h;
+	list_t temp;
 
-	while (check && h != NULL)
+	if (h == NULL)
+		return (0);
+	temp = *h;
+	while (check)
 	{
 		if (temp.str == NULL)
 			printf("[0] (nil)\n");
