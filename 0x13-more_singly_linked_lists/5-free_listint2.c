@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
+#include <stddef.h>
 #include <stdlib.h>
 /**
  * free_listint2 - frees the heap and null a linked list
@@ -7,16 +8,20 @@
  */
 void free_listint2(listint_t **head)
 {
-	listint_t *temp = *head;
+	listint_t *node;
 
-	if (head == NULL || *head == NULL)
-		return;
-	while (temp->next != NULL)
+	if (!head || !*head)
 	{
-		*head = temp->next;
-		free(temp);
-		temp = *head;
+		return;
 	}
-	*head = NULL;
-	free(temp);
+
+	node = *head;
+
+	while (node)
+	{
+		node = (*head)->next;
+		free(*head);
+		*head = node;
+	}
+
 }
