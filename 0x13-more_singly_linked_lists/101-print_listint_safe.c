@@ -8,7 +8,7 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	unsigned int len = 0, i = 0;
+	unsigned int len = 0, i = 0, check = 0;
 	const listint_t *h = head, *test;
 
 	if (!head)
@@ -20,11 +20,14 @@ size_t print_listint_safe(const listint_t *head)
 			if (test == head)
 			{
 				printf("-> [%p] %d\n", (void *) head, head->n);
-				exit(98);
+				check = 1;
+				break;
 			}
 			test = test->next;
 			i++;
 		}
+		if (check)
+			break;
 		printf("[%p] %d\n", (void *) head, head->n);
 		head = head->next;
 		len++, i = 0, test = h;
