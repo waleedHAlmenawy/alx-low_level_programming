@@ -12,10 +12,10 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *h = head, *test;
 
 	if (!head)
-		exit(98);
+		return (0);
 	while (head != NULL)
 	{
-		while (i < len && head != NULL)
+		while (i < len)
 		{
 			if (test == head)
 			{
