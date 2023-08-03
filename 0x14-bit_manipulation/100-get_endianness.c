@@ -5,19 +5,11 @@
  */
 int get_endianness(void)
 {
-	/**
-	 * b_or_l - test endianness
-	 * @i: An integer
-	 * @c: A character
-	 */
-	union
-	{
-		int i;
-		char c[sizeof(int)];
-	} b_or_l;
-	b_or_l.i = 1;
+	union b_or_l test;
 
-	if (b_or_l.c[0] == 1)
+	test.i = 1;
+
+	if (test.c[0] == 1)
 	{
 		return (1);
 	}

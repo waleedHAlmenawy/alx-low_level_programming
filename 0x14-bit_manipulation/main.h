@@ -4,6 +4,17 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * union b_or_l - test endianness
+ * @i: An integer
+ * @c: A character
+ */
+union b_or_l
+{
+	int i;
+	char c[sizeof(int)];
+};
+
 int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
