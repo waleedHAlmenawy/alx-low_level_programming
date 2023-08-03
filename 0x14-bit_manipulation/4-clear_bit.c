@@ -35,5 +35,5 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		}
 		i++, k = i, b_num = 1;
 	}
-	return (-1);
+	return (1);
 }

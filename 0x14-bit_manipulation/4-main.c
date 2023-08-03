@@ -9,15 +9,19 @@
 int main(void)
 {
     unsigned long int n;
+    int i;
 
     n = 1024;
-    clear_bit(&n, 10);
+    i = clear_bit(&n, 10);
+    printf("i: %d\n", i);
     printf("%lu\n", n);
     n = 0;
-    clear_bit(&n, 10);
+    i = clear_bit(&n, 10);
+    printf("i: %d\n", i);
     printf("%lu\n", n);
     n = 98;
-    clear_bit(&n, 1);
+    i = clear_bit(&n, 1);
+    printf("i: %d\n", i);
     printf("%lu\n", n);
     return (0);
 }
