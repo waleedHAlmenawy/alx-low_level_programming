@@ -9,9 +9,11 @@ unsigned int binary_to_uint(const char *b)
 	int i = 0, k = 0, len = 0;
 	unsigned int b_num = 1, d = 0;
 
+	if (b == NULL)
+		return (0);
 	while (b[i] != 0)
 	{
-		if ((b[i] != 48 && b[i] != 49) || !b)
+		if (b[i] != 48 && b[i] != 49)
 			return (0);
 		i++;
 	}
