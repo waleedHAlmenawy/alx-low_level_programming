@@ -11,7 +11,7 @@ unsigned int binary_to_uint(const char *b)
 
 	while (b[i] != 0)
 	{
-		if (b[i] != 48 && b[i] != 49)
+		if (b[i] != 48 && b[i] != 49 || !b)
 			return (0);
 		i++;
 	}
