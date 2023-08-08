@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * read_textfile - reads text from file and print it on consle
+ * @filename: The filename
+ * @letters: Number of letters to be printed
+ * Return: The actual number of letters it could be print
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
