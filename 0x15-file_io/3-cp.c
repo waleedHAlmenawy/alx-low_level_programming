@@ -59,10 +59,14 @@ int main(int ac, char **av)
 	{
 		if (write(fd_to, buf, n_bytes) != n_bytes)
 		{
-			close_all_fd(fd_to, fd_from);
 			dprintf(2, "Error: Can't write to file %s\n", av[2]);
 			exit(99);
 		}
+	}
+	if (n_bytes == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", av[1]);
+		exit(98);
 	}
 	close_all_fd(fd_to, fd_from);
 	return (0);
