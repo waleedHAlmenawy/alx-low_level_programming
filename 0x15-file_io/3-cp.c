@@ -1,8 +1,5 @@
 #include "main.h"
-#include <sys/stat.h>
-#include <errno.h>
 #define READ_BUF_SIZE 1024
-#define PERMISSIONS (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
 /**
  * main - check the code
  *
@@ -26,7 +23,7 @@ int main(int ac, char **av)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", av[1]), exit(98);
 	}
-	fd_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
+	fd_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to == -1)
 	{
 		dprintf(2, "Error: Can't write to file %s\n", av[2]), exit(99);
