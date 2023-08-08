@@ -1,28 +1,6 @@
 #include "main.h"
 #define READ_BUF_SIZE 1024
 /**
- * _close - closes a file
- * @fd: file descriptor
- */
-void _close(int fd)
-{
-	if (close(fd) == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d", fd);
-		exit(100);
-	}
-}
-/**
- * close_all_fd - closes all file descriptors
- * @fd1: First file descriptor
- * @fd2: Second file decriptor
- */
-void close_all_fd(int fd1, int fd2)
-{
-	_close(fd1);
-	_close(fd2);
-}
-/**
  * main - check the code
  *
  * @ac: Argument count
@@ -38,14 +16,12 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
-		exit(97);
+		dprintf(2, "Usage: cp file_from file_to\n"), exit(97);
 	}
 	fd_from = open(av[1], O_RDONLY);
 	if (fd_from == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", av[1]);
-		exit(98);
+		dprintf(2, "Error: Can't read from file %s\n", av[1]), exit(98);
 	}
 	fd_to = open(av[2], O_WRONLY | O_TRUNC);
 	if (fd_to == -1)
@@ -68,6 +44,9 @@ int main(int ac, char **av)
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	close_all_fd(fd_to, fd_from);
+	if (close(fd_from) == -1)
+		dprintf(2, "Error: Can't close fd %d", fd_from), exit(100);
+	if (close(fd_to) == -1)
+		dprintf(2, "Error: Can't close fd %d", fd_to), exit(100);
 	return (0);
 }
